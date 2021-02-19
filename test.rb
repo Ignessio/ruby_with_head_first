@@ -1,8 +1,14 @@
-def order_soda(flavor, size = "medium", quantity = 1)
-    if quantity == 1
-    plural = "soda"
-    else
-    plural = "sodas"
+class Blender
+    def close_lid
+        puts "Sealed tight!"
     end
-    puts "#{quantity} #{size} #{flavor} #{plural}, coming right up!"
+
+    def blend (speed)
+        puts "Spinning on #{speed} setting."
     end
+end
+
+blender = Blender.new
+
+blender.close_lid
+blender.blend ("high")
