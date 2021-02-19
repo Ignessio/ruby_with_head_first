@@ -1,23 +1,8 @@
-class Item
-    def initialize
-        @price = 30
+def order_soda(flavor, size = "medium", quantity = 1)
+    if quantity == 1
+    plural = "soda"
+    else
+    plural = "sodas"
     end
-
-    def price
-        @price
+    puts "#{quantity} #{size} #{flavor} #{plural}, coming right up!"
     end
-
-    def price=(price_value)
-        @price = price_value
-    end
-end
-
-item1 = Item.new
-
-puts item1.price
-
-item1.price = 10
-puts item1.price
-
-item1.price = 20
-puts item1.price

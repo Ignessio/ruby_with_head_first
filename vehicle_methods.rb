@@ -8,7 +8,7 @@ def sound_horn
     puts "Beep beep!"
 end
 
-def use_headlights(brightness)
+def use_headlights(brightness = "low-beam")
     puts "Turning on #{brightness} headlights"
     puts "Watch out for deer!"
 end
@@ -16,7 +16,3 @@ end
 sound_horn
 accelerate
 use_headlights("high-beam")
-
-one string removed and this string added in local git
-
-this line added in local repository
