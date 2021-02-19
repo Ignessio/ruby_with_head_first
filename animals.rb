@@ -1,32 +1,45 @@
 class Bird
-    def talk
+    def talk (name)
         puts "Chirp! Chirp!"
     end
-    def move(destination)
+    def move (name, destination)
         puts "Flying to the #{destination}."
     end
 end
 
 class Dog
-    def talk
-        puts "Bark!"
+    attr_accessor :name, :age
+    def report_age
+        puts "#{@name} is #{@age} years old."
     end
-    def move(destination)
-        puts "Running to the #{destination}."
+    def talk
+        puts "#{@name} says Bark!"
+    end
+    def move (destination)
+        puts "#{@name} runs to the #{destination}."
     end
 end
 
 class Cat
-    def talk
+    def talk (name)
         puts "Meow!"
     end
-    def move(destination)
+    def move (name, destination)
         puts "Running to the #{destination}."
     end
 end
 
 bird = Bird.new
-dog = Dog.new
+
+fido = Dog.new
+fido.name = "Fido"
+fido.age = 2
+rex = Dog.new
+rex.name = "Rex"
+rex.age = 3
+fido.report_age
+rex.report_age
+
 cat = Cat.new
 
 bird.move("tree")
