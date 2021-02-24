@@ -1,9 +1,13 @@
 class Bird
-    def talk (name)
-        puts "Chirp! Chirp!"
+    attr_accessor :name, :age
+    def report_age
+        puts "#{@name} is #{@age} years old."
     end
-    def move (name, destination)
-        puts "Flying to the #{destination}."
+    def talk
+        puts "#{@name} says Chirp! Chirp!"
+    end
+    def move (destination)
+        puts "#{@name} flies to the #{destination}."
     end
 end
 
@@ -21,15 +25,24 @@ class Dog
 end
 
 class Cat
-    def talk (name)
-        puts "Meow!"
+    attr_accessor :name, :age
+    def report_age
+        puts "#{@name} is #{@age} years old."
     end
-    def move (name, destination)
-        puts "Running to the #{destination}."
+    def talk
+        puts "#{@name} says Meaw!"
+    end
+    def move (destination)
+        puts "#{@name} goes to the #{destination}."
     end
 end
 
-bird = Bird.new
+popka = Bird.new
+popka.name = "Popka"
+popka.age = 1
+popka.report_age
+popka.move("tree")
+popka.talk
 
 fido = Dog.new
 fido.name = "Fido"
@@ -39,10 +52,10 @@ rex.name = "Rex"
 rex.age = 3
 fido.report_age
 rex.report_age
+fido.talk
 
-cat = Cat.new
-
-bird.move("tree")
-dog.talk
-bird.talk
-cat.move("house")
+tom = Cat.new
+tom.name = "Tom"
+tom.age = 4
+tom.report_age
+tom.move("house")
