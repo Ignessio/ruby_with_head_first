@@ -12,7 +12,6 @@ class Animal
         end
     @age = value
     end
-
     def move(destination)
         puts "#{@name} runs to the #{destination}."
     end

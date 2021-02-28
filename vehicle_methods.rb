@@ -36,10 +36,12 @@ truck.accelerate
 truck.steer
 truck.load_bed("259 bouncy balls")
 puts "The truck is carrying #{truck.cargo}."
+
 car = Car.new
 car.odometer = 11432
 car.gas_used = 366
 puts car.instance_variables
 puts "Lifetime MPG: #{car.mileage}"
+
 motorcycle = Motorcycle.new
 motorcycle.steer
