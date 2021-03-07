@@ -40,14 +40,14 @@ class HourlyEmployee < Employee
         if hourly_wage == ""
             raise "Hourly wage can't be empty!"
         end
-        @hourly_wage
+        @hourly_wage = hourly_wage
     end
 
     def hours_per_week=(hours_per_week)
         if hours_per_week < 1
             raise "Hours per week #{hours_per_week} isn't valid!"
         end
-       @hours_per_week
+       @hours_per_week = hours_per_week
     end
 
     def initialize(name = "Anonymous", hourly_wage = 0.0, hours_per_week = 0.0)
