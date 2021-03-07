@@ -1,10 +1,16 @@
 class Employee
+
     attr_reader :name
+
     def name=(name)
         if name == ""
             raise "Name can't be blank!"
         end
         @name = name
+    end
+
+    def initialize(name = "Anonymous")
+        self.name = name
     end
 
     def print_name
@@ -13,7 +19,9 @@ class Employee
 end
 
 class SalariedEmployee < Employee
+
     attr_reader :salary
+
     def salary=(salary)
         if salary < 0
             raise "A salary of #{salary} isn't valid!"
@@ -22,7 +30,7 @@ class SalariedEmployee < Employee
     end
 
     def initialize(name = "Anonymous", salary = 0.0)
-        self.name = name
+        super(name)
         self.salary = salary
     end
 
@@ -35,23 +43,25 @@ class SalariedEmployee < Employee
 end
 
 class HourlyEmployee < Employee
+
     attr_reader :hourly_wage, :hours_per_week
+
     def hourly_wage=(hourly_wage)
-        if hourly_wage == ""
-            raise "Hourly wage can't be empty!"
+        if hourly_wage < 0
+            raise "Hourly wage #{hourly_wage} is invalid value!"
         end
         @hourly_wage = hourly_wage
     end
 
     def hours_per_week=(hours_per_week)
-        if hours_per_week < 1
+        if hours_per_week < 0
             raise "Hours per week #{hours_per_week} isn't valid!"
         end
        @hours_per_week = hours_per_week
     end
 
     def initialize(name = "Anonymous", hourly_wage = 0.0, hours_per_week = 0.0)
-        self.name = name
+        super(name)
         self.hourly_wage = hourly_wage
         self.hours_per_week = hours_per_week
     end
@@ -66,5 +76,5 @@ end
 
 salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
 salaried_employee.print_pay_stub
-hourly_employee = HourlyEmployee.new("John Smith", 14.97, 30)
+hourly_employee = HourlyEmployee.new("John Smith", 14.97, 40)
 hourly_employee.print_pay_stub
