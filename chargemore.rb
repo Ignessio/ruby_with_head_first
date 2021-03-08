@@ -45,8 +45,20 @@ end
 class HourlyEmployee < Employee
 
     attr_reader :hourly_wage, :hours_per_week
+    
+    def self.security_guard(name)
+        HourlyEmployee.new(name, 19.25, 30)
+    end
 
-    def hourly_wage=(hourly_wage)
+    def self.cashier(name)
+        HourlyEmployee.new(name, 12.75, 25)
+    end
+
+    def self.janitor(name)
+        HourlyEmployee.new(name, 10.50, 20)
+    end
+
+   def hourly_wage=(hourly_wage)
         if hourly_wage < 0
             raise "Hourly wage #{hourly_wage} is invalid value!"
         end
@@ -74,7 +86,15 @@ class HourlyEmployee < Employee
     end
 end
 
-salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
-salaried_employee.print_pay_stub
-hourly_employee = HourlyEmployee.new("John Smith", 14.97, 40)
-hourly_employee.print_pay_stub
+#salaried_employee = SalariedEmployee.new("Jane Doe", 50000)
+#hourly_employee = HourlyEmployee.new("John Smith", 14.97, 40)
+#salaried_employee.print_pay_stub
+#hourly_employee.print_pay_stub
+
+angela = HourlyEmployee.security_guard("Angela Matthews")
+edwin = HourlyEmployee.janitor("Edwin Burgess")
+ivan = HourlyEmployee.cashier("Ivan Stokes")
+
+angela.print_pay_stub
+edwin.print_pay_stub
+ivan.print_pay_stub
