@@ -91,6 +91,9 @@ end
 #salaried_employee.print_pay_stub
 #hourly_employee.print_pay_stub
 
+jane = SalariedEmployee.new("Jane Doe", 50000)
+jane.print_pay_stub
+
 angela = HourlyEmployee.security_guard("Angela Matthews")
 edwin = HourlyEmployee.janitor("Edwin Burgess")
 ivan = HourlyEmployee.cashier("Ivan Stokes")
