@@ -1,13 +1,7 @@
-class One
+[:foo, :bar, :baz].each.with_index(4) do |value, index|
+    puts "#{index}: #{value}"
 end
 
-class Two < One
+[:foo, :bar, :baz].each_with_index do |value, index|
+    puts "#{index}: #{value}"
 end
-
-class Three < Object
-end
-
-puts One.superclass
-puts Two.superclass
-puts Three.superclass
-puts Object.superclass
