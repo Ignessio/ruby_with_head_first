@@ -4,15 +4,13 @@ def my_method
     puts "We're back in the method!"
 end
 
-my_method do
-    puts "We're in the block!"
-end
+my_method { puts "We're in the block!" }
 
 def give
-    yield "2 turtle doves", "1 partridge"
+    yield "2 turtle doves", "1 partridge", "3 hamsters"
 end
 
-give do |present1, present2|
+give do |arg1, arg2, arg3|
     puts "My method gave to me..."
-    puts present1, present2
+    puts "#{arg1}, #{arg2}, #{arg3}"
 end
