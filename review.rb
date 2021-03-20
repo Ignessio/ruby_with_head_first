@@ -10,4 +10,18 @@ reviews = relevant_lines.reject { |line| line.include?("--") }
 
 #puts relevant_lines
 
-puts reviews
+#puts reviews
+
+def find_adjective(string)
+    words = string.split(" ")
+    index = words.find_index("is")
+    words[index +1]
+end
+
+adjectives = reviews.map do |review|
+    adjective = find_adjective(review)
+    "'#{adjective.capitalize}'"
+end
+
+puts "The critics agree, Truncated is:"
+puts adjectives
