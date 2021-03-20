@@ -1,20 +1,14 @@
-def yield_number
-    yield 4
+def make_casserole
+    puts "Preheat oven to 375 degrees"
+    ingredients = yield
+    puts "Place #{ingredients} in dish"
+    puts "Bake for 20 minutes"
 end
 
-array = [1, 2, 3]
-
-yield_number { |number| array << number }
-p array
-
-sum = 0
-[1, 2, 3].each { |number| sum += number }
-puts sum
-
-contents = []
-
-File.open("sample.txt") do |file|
-    contents = file.readlines
+make_casserole do
+    "noodles, celery, and tuna"
 end
 
-puts contents
+make_casserole do
+    "rice, broccoli, and chicken"
+end
