@@ -13,11 +13,18 @@ end
 make_casserole do
     "rice, broccoli, and chicken"
 end
-=end
 
 x = gets.to_i
 y = gets.to_i
 while x <= y
 puts x
 x += 1
+end
+
+=end
+
+a = gets.to_i
+for i in 0..a
+    next if i %2 == 0
+    puts i
 end
