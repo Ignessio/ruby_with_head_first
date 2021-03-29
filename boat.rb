@@ -6,7 +6,7 @@ end
 
 class PowerBoat < Boat
 
-    def initialize(name, motor_type)
+    def initialize(name = "Boat", motor_type = "unspecified")
         super(name)
         @motor_type = motor_type
     end

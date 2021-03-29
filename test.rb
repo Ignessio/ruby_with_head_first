@@ -23,8 +23,13 @@ end
 
 =end
 
-a = gets.to_i
-for i in 0..a
-    next if i %2 == 0
-    puts i
-end
+n = gets.to_i
+
+# сотни
+p n / 100 + n / 10 % 10 + n % 10
+
+# десятки
+#b = n / 10 % 10
+
+# единицы
+#c = n % 10
