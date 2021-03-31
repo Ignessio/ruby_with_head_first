@@ -1,8 +1,6 @@
 lines = []
 
-File.open("reviews.txt") do |review_file|
-    lines = review_file.readlines
-end
+File.open("reviews.txt") { |review_file| lines = review_file.readlines }
 
 relevant_lines = lines.find_all { |line| line.include?("Truncated") }
 
