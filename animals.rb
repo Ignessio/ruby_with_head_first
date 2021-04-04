@@ -21,6 +21,7 @@ class Animal
     def report_age
         puts "#{@name} is #{@age} years old."
     end
+    
 end
 
 class Dog < Animal
@@ -32,13 +33,21 @@ end
 class Bird < Animal
     def talk
         puts "#{@name} says Chirp! Chirp!"
-    end 
+    end
+    def to_s
+        "#{@name} the bird, age #{age}"
+    end
+
 end
 
 class Cat < Animal
     def talk
         puts "#{@name} says Meow!"
-    end 
+    end
+    def to_s
+        "#{@name} the cat, age #{age}"
+    end
+
 end
 
 class Armadillo < Animal
@@ -49,7 +58,9 @@ class Armadillo < Animal
     def talk
         puts "#{@name} says Brolp!"
     end 
-
+    def to_s
+        "#{@name} the armadillo, age #{age}"
+    end
 end
 
 tom = Cat.new
@@ -61,7 +72,13 @@ tom.talk
 dillon = Armadillo.new
 dillon.name = "Dillon"
 dillon.move("burrow")
+dillon.age = 1
 dillon.talk
+
+popka = Bird.new
+popka.name = "Popka"
+popka.age = 5
+popka.talk
 
 lucy = Dog.new
 lucy.name = "Lucy"
@@ -69,4 +86,4 @@ lucy.age = 4
 rex = Dog.new
 rex.name = "Rex"
 rex.age = 2
-puts lucy, rex
+puts lucy, rex, tom, dillon, popka
