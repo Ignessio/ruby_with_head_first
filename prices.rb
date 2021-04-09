@@ -4,17 +4,6 @@ def total(prices)
     amount
 end
 
-def each(prices)
-    index = 0
-    while index <self.length
-        yield self[index]
-        index += 1
-    end
-end
-
-each do |price| puts price
-end
-
 def refund(prices)
     amount = 0
     prices.each { |price| amount -= price }
