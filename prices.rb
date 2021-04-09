@@ -11,10 +11,7 @@ def refund(prices)
 end
 
 def show_discounts(prices)
-    prices.each do |price|
-        amount_off = price / 3.0
-        puts format("Your discount: $%.2f", amount_off)
-    end
+    prices.each { |price| puts format("Your discount: $%.2f", price / 3.0) }
 end
 
 prices = [3.99, 25.00, 8.99]
