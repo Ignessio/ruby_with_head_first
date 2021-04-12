@@ -1,8 +1,6 @@
 lines = []
 
-File.open("votes.txt") do |votes|
-    lines = votes.readlines
-end
+File.open("votes.txt") { |votes| lines = votes.readlines }
 
 votes = {}
 
@@ -11,7 +9,7 @@ lines.each do |line|
     if votes[name] != nil
         votes[name] += 1
     else
-        votes[name] = 1
+    votes[name] = 1
     end
 end
 
