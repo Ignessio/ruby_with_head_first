@@ -14,7 +14,6 @@ end
 ar = ["a", "b", "c"]
 
 ar.each
-=end
 
 arr1 = [8, 5, 1, 3, 5, 4, 6, 7, 11]
 
@@ -25,3 +24,16 @@ puts arr1.length
 puts arr1.include?(7)
 puts arr1.max
 print arr1
+
+hash = {"Январь"=>31, "Февраль"=>28, "Март"=>31}
+puts hash
+
+=end
+
+
+def x(y)
+    res = 0
+    (0..y).each {|z| res+=z}
+    res
+  end
+  puts x(3)
