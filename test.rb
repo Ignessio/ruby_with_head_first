@@ -45,13 +45,24 @@ hash = {one:1, two:2, three:3, four:4, five:5, six:6}
 sum = 0
 hash.each { |key, value| sum += value }
 puts sum
+
+s = "some text goes here"
+c = 0
+s.each_char do |x| 
+  c += 1 if x == "e"
+end
+puts c
+
+def greet(name="")
+  if name==""
+    puts "Greetings!"
+  else
+    puts "Welcome, #{name}"
+  end
+end
+
+greet(gets.chomp)
+
 =end
 
-text = "I am learning Ruby and it is fun!"
-text.downcase!
-freqs = {}
-freqs.default = 0
 
-text.each_char { |char| freqs[char] += 1}
-
-("a".."z").each {|x| puts "#{x} : #{freqs[x]}" }
