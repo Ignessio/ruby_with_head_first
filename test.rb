@@ -65,4 +65,3 @@ greet(gets.chomp)
 
 =end
 
-
