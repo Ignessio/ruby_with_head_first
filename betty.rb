@@ -13,8 +13,11 @@ betty = LoveInterest.new
 candace = LoveInterest.new
   
 betty.request_date
-candace = betty
+#candace = betty
 candace.request_date
+
+puts betty.object_id
+puts candace.object_id
 
 puts betty.inspect
 puts candace.inspect
