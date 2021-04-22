@@ -35,4 +35,4 @@ p bodies['Mars']
 p bodies['Europa']
 p bodies['Venus']
 
-#p bodies
+p bodies
