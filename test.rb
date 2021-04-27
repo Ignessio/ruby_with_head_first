@@ -63,8 +63,6 @@ end
 
 greet(gets.chomp)
 
-=end
-
 def fib(num)
   if num < 2
     num
@@ -73,3 +71,13 @@ def fib(num)
   end
 end
 puts fib(4)
+
+=end
+
+class Calc
+  def self.sqr(x)
+    puts x*x
+  end
+end
+
+Calc.sqr(2)
