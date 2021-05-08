@@ -1,4 +1,4 @@
-arr = "Рассмотрим пример с подсчетом количества вхождений букв в массиве".chars
+arr = "The weather is cold, cloudy and... rainy today.".chars
 
 counts = Hash.new(0)
 arr.each do |letter|
