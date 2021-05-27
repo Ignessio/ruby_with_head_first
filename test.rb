@@ -139,7 +139,6 @@ end
 x = gets
 p = Custom.new(x)
 puts p
-=end
 
 module Car
   class Volvo
@@ -167,3 +166,5 @@ car = Car::Volvo.new
 car.how_many_wheels
 car = Truck::Volvo.new
 car.how_many_wheels
+=end
+
