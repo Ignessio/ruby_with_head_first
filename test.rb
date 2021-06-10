@@ -181,8 +181,8 @@ end
 
 =end
 
-
-
+=begin
+#exception with rescue
 class TestScoreError < StandardError
 end
 
@@ -197,6 +197,18 @@ rescue TestScoreError => error
   puts "Received #{error.message}. Taking make-up exam..."
   score = 63
   retry
+end
+=end
+
+#minitest run
+require 'minitest/autorun'
+class Test < Minitest::Test
+  def test_true_assertion
+    assert(true)
+  end
+  def test_false_assertion
+    assert(false)
+  end
 end
 
 
