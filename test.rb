@@ -1,4 +1,5 @@
 =begin
+#define handmade method each
 def each(par)
     index = 0
     while index < self.length
@@ -10,7 +11,10 @@ end
 each do |param|
 puts param
 end
+=end
 
+=begin
+#array
 ar = ["a", "b", "c"]
 
 ar.each
@@ -24,12 +28,16 @@ puts arr1.length
 puts arr1.include?(7)
 puts arr1.max
 print arr1
+=end
 
+=begin
+#hash
 hash = {"Январь"=>31, "Февраль"=>28, "Март"=>31}
 puts hash
+=end
 
-
-
+=begin
+#define x method with argument
 def x(y)
     res = 0
     (0..y).each {|z| res+=z}
@@ -40,6 +48,7 @@ def x(y)
 "performance".each_char do |x|
   puts x
 end
+
 
 hash = {one:1, two:2, three:3, four:4, five:5, six:6}
 sum = 0
@@ -200,7 +209,9 @@ rescue TestScoreError => error
 end
 =end
 
+
 #minitest run
+=begin
 require 'minitest/autorun'
 class Test < Minitest::Test
   def test_true_assertion
@@ -210,5 +221,19 @@ class Test < Minitest::Test
     assert(false)
   end
 end
+=end
+
+=begin
+#minitest fallacy check
+require 'minitest/autorun'
+class TestMath < Minitest::Test
+    def test_truth
+        assert(2 + 2 == 4)
+    end
+    def test_fallacy
+        assert(2 + 2 == 5)
+    end
+end
+=end
 
 
