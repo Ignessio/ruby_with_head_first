@@ -1,5 +1,4 @@
 =begin
-#define handmade method each
 def each(par)
     index = 0
     while index < self.length
@@ -11,10 +10,7 @@ end
 each do |param|
 puts param
 end
-=end
 
-=begin
-#array
 ar = ["a", "b", "c"]
 
 ar.each
@@ -28,16 +24,12 @@ puts arr1.length
 puts arr1.include?(7)
 puts arr1.max
 print arr1
-=end
 
-=begin
-#hash
 hash = {"Январь"=>31, "Февраль"=>28, "Март"=>31}
 puts hash
-=end
 
-=begin
-#define x method with argument
+
+
 def x(y)
     res = 0
     (0..y).each {|z| res+=z}
@@ -48,7 +40,6 @@ def x(y)
 "performance".each_char do |x|
   puts x
 end
-
 
 hash = {one:1, two:2, three:3, four:4, five:5, six:6}
 sum = 0
@@ -138,100 +129,26 @@ puts "LETS FIGHT!"
 fight(p1, p2)
 
 class Custom
-def initialize x
-  @x = x
-end
-def to_s
-  @x
-end
-end
-x = gets
-p = Custom.new(x)
-puts p
-
-module Car
-  class Volvo
-    def initialize
-      @@wheels = 4
-    end
-    def how_many_wheels
-      puts "#{@@wheels}"
-    end
+  def initialize(x)
+    @x = x
+  end
+  def to_s
+    "#{@x}"
   end
 end
 
-module Truck
-  class Volvo
-    def initialize
-      @@wheels = 6
-    end
-    def how_many_wheels
-      puts "#{@@wheels}"
-    end
-  end
-end
-
-car = Car::Volvo.new
-car.how_many_wheels
-car = Truck::Volvo.new
-car.how_many_wheels
-
-def drive(destination)
-  if destination == "Hawaii"
-    raise "You can't drive to Hawaii!"
-  end
-end
-
-begin
-drive("Hawaii")
-rescue => error
-  puts error.message
-end
-
+c = Custom.new("Ok, do it!")
+puts c
 =end
 
-=begin
-#exception with rescue
-class TestScoreError < StandardError
-end
-
-score = 52
-begin
-  if score > 60
-    puts "passing grade"
+# kata "compare within margin"
+def close_compare(a, b, margin = 0)
+  if a < b
+    puts -1
+  elsif a > b
+  puts 1
   else
-    raise TestScoreError, "failing grade"
-  end
-rescue TestScoreError => error
-  puts "Received #{error.message}. Taking make-up exam..."
-  score = 63
-  retry
-end
-=end
-
-
-#minitest run
-=begin
-require 'minitest/autorun'
-class Test < Minitest::Test
-  def test_true_assertion
-    assert(true)
-  end
-  def test_false_assertion
-    assert(false)
+    puts 0
   end
 end
-=end
-
-#minitest fallacy check
-require 'minitest/autorun'
-class TestMath < Minitest::Test
-    def test_truth
-        assert_equal(2 + 2, 4)
-    end
-    def test_fallacy
-        assert_equal(2 + 2, 5)
-    end
-end
-
 

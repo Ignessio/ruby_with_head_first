@@ -22,4 +22,6 @@ p splitter.find { |word| word.include?("beef") }
 p splitter.first
 p splitter.group_by { |word| word.include?("beef") }
 p splitter.max_by { |word| word.length }
-p splitter.to_a
+p splitter.to_a.length
+p splitter.map { |word| word.upcase }.to_a
+p splitter.sort
