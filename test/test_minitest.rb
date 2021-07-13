@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-class TestArray , Minitest::Test
+class TestArray < Minitest::Test
     def setup
         @array = ['a', 'b', 'c']
     end
